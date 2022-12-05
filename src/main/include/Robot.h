@@ -7,13 +7,13 @@
 #include "rev/CANSparkMaxLowLevel.h"
 #include <string>
 
+#include <frc/Joystick.h>
 #include <frc/TimedRobot.h>
 #include <frc/smartdashboard/SendableChooser.h>
 #include <rev/CANSparkMax.h>
-#include <frc/Joystick.h>
 
 class Robot : public frc::TimedRobot {
- public:
+public:
   void RobotInit() override;
   void RobotPeriodic() override;
   void AutonomousInit() override;
@@ -25,9 +25,9 @@ class Robot : public frc::TimedRobot {
   void TestInit() override;
   void TestPeriodic() override;
 
- private:
-    rev::CANSparkMax motor0 = rev::CANSparkMax(0, rev::CANSparkMaxLowLevel::MotorType::kBrushed);
-    rev::CANSparkMax motor1 = rev::CANSparkMax(1, rev::CANSparkMaxLowLevel::MotorType::kBrushed);
+private:
+  rev::CANSparkMax motor0 = rev::CANSparkMax(0, rev::CANSparkMaxLowLevel::MotorType::kBrushed);
+  rev::CANSparkMax motor1 = rev::CANSparkMax(1, rev::CANSparkMaxLowLevel::MotorType::kBrushed);
 
-    frc::Joystick joystick = frc::Joystick(0);
+  frc::Joystick joystick = frc::Joystick(0);
 };
