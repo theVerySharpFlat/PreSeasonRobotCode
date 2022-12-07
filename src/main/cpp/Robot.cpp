@@ -8,8 +8,7 @@
 
 #include <frc/smartdashboard/SmartDashboard.h>
 
-void Robot::RobotInit() {
-}
+void Robot::RobotInit() {}
 
 /**
  * This function is called every robot packet, no matter the mode. Use
@@ -19,9 +18,7 @@ void Robot::RobotInit() {
  * <p> This runs after the mode specific periodic functions, but before
  * LiveWindow and SmartDashboard integrated updating.
  */
-void Robot::RobotPeriodic() {
-
-}
+void Robot::RobotPeriodic() {}
 
 /**
  * This autonomous (along with the chooser code above) shows how to select
@@ -34,19 +31,14 @@ void Robot::RobotPeriodic() {
  * if-else structure below with additional strings. If using the SendableChooser
  * make sure to add them to the chooser code above as well.
  */
-void Robot::AutonomousInit() {
-}
+void Robot::AutonomousInit() {}
 
-void Robot::AutonomousPeriodic() {
+void Robot::AutonomousPeriodic() {}
 
-}
-
-void Robot::TeleopInit() {
-
-}
+void Robot::TeleopInit() {}
 
 void Robot::TeleopPeriodic() {
-  if(joystick.GetTrigger()) {
+  if (joystick.GetTrigger()) {
     motor0.Set(1.0);
     motor1.Set(-1.0);
   } else {
@@ -64,7 +56,5 @@ void Robot::TestInit() {}
 void Robot::TestPeriodic() {}
 
 #ifndef RUNNING_FRC_TESTS
-int main() {
-  return frc::StartRobot<Robot>();
-}
+int main() { return frc::StartRobot<Robot>(); }
 #endif
